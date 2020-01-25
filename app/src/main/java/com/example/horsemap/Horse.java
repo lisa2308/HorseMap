@@ -1,5 +1,7 @@
 package com.example.horsemap;
 
+import android.graphics.drawable.Drawable;
+
 public class Horse {
 
     private String name;
