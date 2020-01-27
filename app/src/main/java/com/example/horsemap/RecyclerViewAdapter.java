@@ -1,15 +1,11 @@
 package com.example.horsemap;
 
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
@@ -25,8 +21,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView name;
         TextView birth;
         TextView sexe;
-        ImageView color;
-        ImageView photo;
+        TextView color;
+        //ImageView photo;
         TextView place;
 
         public RecyclerHolder(View view){
@@ -35,7 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             birth = view.findViewById(R.id.activity_main_birth);
             sexe = view.findViewById(R.id.activity_main_sexe);
             color = view.findViewById(R.id.activity_main_color);
-            photo = view.findViewById(R.id.activity_main_photo);
+            //photo = view.findViewById(R.id.activity_main_photo);
             place = view.findViewById(R.id.activity_main_place);
 
         }
@@ -44,7 +40,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public RecyclerHolder onCreateViewHolder(final ViewGroup parent, int viewType){
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_horse,parent,false);
+                .inflate(R.layout.activity_horse_item,parent,false);
         return new RecyclerHolder(itemView);
     }
 
@@ -57,9 +53,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.name.setText(horse.getName());
         holder.birth.setText(horse.getBirth());
         holder.sexe.setText(horse.getSexe());
-        holder.color.setBackground(horse.getColor());
+        holder.color.setText(horse.getColor());
         holder.place.setText(horse.getPlace());
-        holder.photo.setImageResource(horse.getPhoto());
+        //holder.photo.setImageResource(horse.getPhoto());
 
     }
     @Override

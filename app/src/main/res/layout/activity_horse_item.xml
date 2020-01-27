@@ -54,7 +54,7 @@
             android:textSize="20sp"
             android:layout_marginBottom="5dp"/>
 
-        <ImageView
+        <TextView
             android:id="@+id/activity_main_color"
             android:layout_width="30dp"
             android:layout_height="30dp"

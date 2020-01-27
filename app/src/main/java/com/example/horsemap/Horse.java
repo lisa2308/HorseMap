@@ -9,15 +9,15 @@ public class Horse {
     private String sexe;
     private int color;
     private int place;
-    private String photo;
+    //private String photo;
 
-    public Horse(String name, int birth, String sexe, int color, int place, String photo) {
+    public Horse(String name, int birth, String sexe, int color, int place) {
         this.name = name;
         this.birth = birth;
         this.sexe = sexe;
         this.color = color;
         this.place = place;
-        this.photo = photo;
+        //this.photo = photo;
     }
 
     public String getName() {
@@ -60,11 +60,11 @@ public class Horse {
         this.place = place;
     }
 
-    public String getPhoto() {
-        return photo;
+    //public String getPhoto() {
+       // return photo;
     }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-}
+   // public void setPhoto(String photo) {
+      //  this.photo = photo;
+    //}
+//}
