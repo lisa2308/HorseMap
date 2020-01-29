@@ -1,5 +1,6 @@
 package com.example.horsemap;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_horse_item);
+        setContentView(R.layout.activity_horse);
 
         recyclerView = findViewById(R.id.activity_horse_recycler);
         initRecycler();
@@ -27,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void initRecycler(){
         List<Horse> horseList = new ArrayList<>();
-        horseList.add(new Horse("Camacho",2001, "Male", R.color.colorWhite,8));
+        horseList.add(new Horse("https://desenio.fr/bilder/artiklar/zoom/3547_1.jpg","CAMACHO", "N°BOX",8));
+        horseList.add(new Horse("https://farm5.static.flickr.com/4479/37522445620_7d0f529952_b.jpg","ROUPIE", "N°BOX", 20));
+
 
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(horseList);
         recyclerView.setAdapter(recyclerViewAdapter);

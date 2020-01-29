@@ -1,6 +1,6 @@
 package com.example.horsemap;
 
-import android.graphics.drawable.Drawable;
+import android.widget.TextView;
 
 public class Horse {
 
@@ -8,16 +8,15 @@ public class Horse {
     private int birth;
     private String sexe;
     private int color;
-    private int place;
-    //private String photo;
+    private int number;
+    private String place;
+    private String photo;
 
-    public Horse(String name, int birth, String sexe, int color, int place) {
+    public Horse(String photo, String name, String place, int number) {
         this.name = name;
-        this.birth = birth;
-        this.sexe = sexe;
-        this.color = color;
         this.place = place;
-        //this.photo = photo;
+        this.number = number;
+        this.photo = photo;
     }
 
     public String getName() {
@@ -52,19 +51,26 @@ public class Horse {
         this.color = color;
     }
 
-    public int getPlace() {
-        return place;
+    public int getNumber() {
+        return number;
     }
 
-    public void setPlace(int place) {
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+    public void setPlace(String place){
         this.place = place;
     }
 
-    //public String getPhoto() {
-       // return photo;
+    public String getPhoto() {
+        return photo;
     }
 
-   // public void setPhoto(String photo) {
-      //  this.photo = photo;
-    //}
-//}
+   public void setPhoto(String photo) {
+      this.photo = photo;
+    }
+}

@@ -1,11 +1,16 @@
 package com.example.horsemap;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -19,20 +24,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class RecyclerHolder extends RecyclerView.ViewHolder{
         TextView name;
-        TextView birth;
-        TextView sexe;
-        TextView color;
-        //ImageView photo;
+        ImageView photo;
+        TextView number;
         TextView place;
+
 
         public RecyclerHolder(View view){
             super(view);
-            name = view.findViewById(R.id.activity_main_name);
-            birth = view.findViewById(R.id.activity_main_birth);
-            sexe = view.findViewById(R.id.activity_main_sexe);
-            color = view.findViewById(R.id.activity_main_color);
-            //photo = view.findViewById(R.id.activity_main_photo);
-            place = view.findViewById(R.id.activity_main_place);
+            name = view.findViewById(R.id.activity_horse_item_name);
+            number = view.findViewById(R.id.activity_horse_item_number);
+            place = view.findViewById(R.id.activity_horse_item_place);
+            photo = view.findViewById(R.id.activity_horse_item_photo);
+
 
         }
     }
@@ -51,11 +54,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         final Horse horse = horseList.get(position);
 
         holder.name.setText(horse.getName());
-        holder.birth.setText(horse.getBirth());
-        holder.sexe.setText(horse.getSexe());
-        holder.color.setText(horse.getColor());
-        holder.place.setText(horse.getPlace());
-        //holder.photo.setImageResource(horse.getPhoto());
+        holder.place.setText("N°BOX");
+        holder.number.setText(String.valueOf(horse.getNumber()));
+        Picasso.get().load(horse.getPhoto()).into(holder.photo);
 
     }
     @Override
