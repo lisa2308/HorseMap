@@ -1,11 +1,18 @@
-package com.example.horsemap;
+package com.example.horsemap.activites;
 
-import android.content.Context;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.horsemap.RecyclerViewHolderListener;
+import com.example.horsemap.data.Horse;
+import com.example.horsemap.R;
+import com.example.horsemap.adapters.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +38,15 @@ public class MainActivity extends AppCompatActivity {
         horseList.add(new Horse("https://desenio.fr/bilder/artiklar/zoom/3547_1.jpg","CAMACHO", "N°BOX",8));
         horseList.add(new Horse("https://farm5.static.flickr.com/4479/37522445620_7d0f529952_b.jpg","ROUPIE", "N°BOX", 20));
 
-
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(horseList);
+        RecyclerViewHolderListener listener = new RecyclerViewHolderListener() {
+            @Override
+            public void onItemClicked(RecyclerView.ViewHolder viewHolder, Object item, int pos) {
+                Intent i = new Intent(recyclerView.getContext(), HorseDetailsActivity.class);
+                startActivity(i);
+            }
+        };
+        //ASSOCIATE ADAPTER WITH RECYCLER//
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(horseList, listener);
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
@@ -40,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //ASSOCIATE ADAPTER WITH RECYCLER//
+
+
 
 
 

@@ -1,4 +1,4 @@
-package com.example.horsemap;
+package com.example.horsemap.data;
 
 import android.widget.TextView;
 

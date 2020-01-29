@@ -1,15 +1,16 @@
-package com.example.horsemap;
+package com.example.horsemap.adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.horsemap.RecyclerViewHolderListener;
+import com.example.horsemap.data.Horse;
+import com.example.horsemap.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -17,9 +18,12 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerHolder> {
 
     List<Horse> horseList;
+    RecyclerViewHolderListener listener;
 
-    public RecyclerViewAdapter(List<Horse> horseList){
+    public RecyclerViewAdapter(List<Horse> horseList, RecyclerViewHolderListener listener){
         this.horseList = horseList;
+        this.listener = listener;
+
     }
 
     public static class RecyclerHolder extends RecyclerView.ViewHolder{
@@ -57,6 +61,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.place.setText("N°BOX");
         holder.number.setText(String.valueOf(horse.getNumber()));
         Picasso.get().load(horse.getPhoto()).into(holder.photo);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onItemClicked(holder,horse,position);
+            }
+        });
+
+
 
     }
     @Override
