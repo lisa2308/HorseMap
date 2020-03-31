@@ -44,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N° box:"
+            android:textColor="@color/colorGrey"
             android:textStyle="bold"
             android:layout_gravity="center"
             android:layout_marginTop="10dp" />
@@ -51,9 +52,10 @@
         <TextView
             android:id="@+id/activity_horse_item_number"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="18dp"
             android:layout_gravity="center"
-            android:text="8"/>
+            android:text="8"
+            android:textColor="@color/colorGrey" />
 
     </LinearLayout>
 

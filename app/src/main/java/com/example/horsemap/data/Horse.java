@@ -2,21 +2,68 @@ package com.example.horsemap.data;
 
 import android.widget.TextView;
 
+import com.example.horsemap.R;
+
 public class Horse {
 
+    private String photo;
     private String name;
-    private int birth;
     private String sexe;
-    private int color;
+    private int age;
+    private String size;
+    private int colorMat;
+    private String enrenement;
+    private String matComp;
     private int number;
     private String place;
-    private String photo;
+    private String race;
 
-    public Horse(String photo, String name, String place, int number) {
+
+    public Horse(String race, String photo, String name, String place, int number, String sexe, int age, String size, int colorMat, String enrenement, String matComp) {
+        this.race = race;
         this.name = name;
         this.place = place;
         this.number = number;
         this.photo = photo;
+        this.sexe = sexe;
+        this.age = age;
+        this.size = size;
+        this.colorMat = colorMat;
+        this.enrenement = enrenement;
+        this.matComp = matComp;
+    }
+
+    public Horse(String race, String photo, String name, String place, int number, String sexe, int age, String size, String enrenement, String matComp) {
+        this.race = race;
+        this.name = name;
+        this.place = place;
+        this.number = number;
+        this.photo = photo;
+        this.sexe = sexe;
+        this.age = age;
+        this.size = size;
+        this.enrenement = enrenement;
+        this.matComp = matComp;
+    }
+
+    public Horse(String race, String photo, String name, String place, int number, String sexe, int age, String size) {
+        this.race = race;
+        this.name = name;
+        this.place = place;
+        this.number = number;
+        this.photo = photo;
+        this.sexe = sexe;
+        this.age = age;
+        this.size = size;
+    }
+
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
     }
 
     public String getName() {
@@ -27,13 +74,6 @@ public class Horse {
         this.name = name;
     }
 
-    public int getBirth() {
-        return birth;
-    }
-
-    public void setBirth(int birth) {
-        this.birth = birth;
-    }
 
     public String getSexe() {
         return sexe;
@@ -43,12 +83,12 @@ public class Horse {
         this.sexe = sexe;
     }
 
-    public int getColor() {
-        return color;
+    public int getColorMat() {
+        return colorMat;
     }
 
-    public void setColor(int color) {
-        this.color = color;
+    public void setColorMat(int color) {
+        this.colorMat = color;
     }
 
     public int getNumber() {
@@ -73,4 +113,37 @@ public class Horse {
    public void setPhoto(String photo) {
       this.photo = photo;
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getEnrenement() {
+        return enrenement;
+    }
+
+    public void setEnrenement(String enrenement) {
+        this.enrenement = enrenement;
+    }
+
+    public String getMatComp() {
+        return matComp;
+    }
+
+    public void setMatComp(String matComp) {
+        this.matComp = matComp;
+    }
 }
+
