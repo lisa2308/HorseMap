@@ -1,8 +1,5 @@
 package com.example.horsemap.data;
 
-import android.widget.TextView;
-
-import com.example.horsemap.R;
 
 public class Horse {
 
@@ -13,13 +10,15 @@ public class Horse {
     private String size;
     private int colorMat;
     private String enrenement;
-    private String matComp;
+    private String enplus;
     private int number;
     private String place;
     private String race;
+    private String pension;
+    private String tel;
 
 
-    public Horse(String race, String photo, String name, String place, int number, String sexe, int age, String size, int colorMat, String enrenement, String matComp) {
+    public Horse(String race, String photo, String name, String place, int number, String sexe, int age, String size, int colorMat, String enrenement, String enplus) {
         this.race = race;
         this.name = name;
         this.place = place;
@@ -30,33 +29,39 @@ public class Horse {
         this.size = size;
         this.colorMat = colorMat;
         this.enrenement = enrenement;
-        this.matComp = matComp;
+        this.enplus = enplus;
     }
 
-    public Horse(String race, String photo, String name, String place, int number, String sexe, int age, String size, String enrenement, String matComp) {
+    public Horse(String race, String photo, String name, String place, int number, String pension, String sexe, int age, String size, String enplus, String tel) {
         this.race = race;
         this.name = name;
         this.place = place;
         this.number = number;
+        this.pension = pension;
         this.photo = photo;
         this.sexe = sexe;
         this.age = age;
         this.size = size;
-        this.enrenement = enrenement;
-        this.matComp = matComp;
+        this.enplus = enplus;
+        this.tel = tel;
     }
 
-    public Horse(String race, String photo, String name, String place, int number, String sexe, int age, String size) {
-        this.race = race;
-        this.name = name;
-        this.place = place;
-        this.number = number;
-        this.photo = photo;
-        this.sexe = sexe;
-        this.age = age;
-        this.size = size;
+
+    public String getPension() {
+        return pension;
     }
 
+    public void setPension(String pension) {
+        this.pension = pension;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
 
     public String getRace() {
         return race;
@@ -138,12 +143,12 @@ public class Horse {
         this.enrenement = enrenement;
     }
 
-    public String getMatComp() {
-        return matComp;
+    public String getEnplus() {
+        return enplus;
     }
 
-    public void setMatComp(String matComp) {
-        this.matComp = matComp;
+    public void setEnplus(String enplus) {
+        this.enplus = enplus;
     }
 }
 

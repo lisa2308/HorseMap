@@ -47,7 +47,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public RecyclerHolder onCreateViewHolder(final ViewGroup parent, int viewType){
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_horse_item,parent,false);
+                .inflate(R.layout.fragment_club_item,parent,false);
         return new RecyclerHolder(itemView);
     }
 

@@ -2,19 +2,18 @@ package com.example.horsemap.activites;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.ImageView;
+
 import android.widget.TextView;
 
-import androidx.appcompat.app.ActionBar;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.example.horsemap.R;
-import com.example.horsemap.data.Horse;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-public class HorseDetailsActivity extends AppCompatActivity {
+
+public class HorseDetailsClubActivity extends AppCompatActivity  {
 
 //les findView
 
@@ -22,17 +21,23 @@ public class HorseDetailsActivity extends AppCompatActivity {
     TextView race;
     TextView size;
     TextView sexe;
+    TextView age;
+    TextView colorMat;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.horse_details);
+        setContentView(R.layout.horse_details_club);
 
         name = findViewById(R.id.horse_details_title);
         race = findViewById(R.id.horse_details_race);
         size = findViewById(R.id.horse_details_taille);
         sexe = findViewById(R.id.horse_details_sexe);
+        age = findViewById(R.id.horse_details_age);
+        size = findViewById(R.id.horse_details_taille);
+        colorMat = findViewById(R.id.horse_details_couleurMat);
+
 
         Intent i = getIntent();
         String nameStr = i.getStringExtra("name");
@@ -43,9 +48,12 @@ public class HorseDetailsActivity extends AppCompatActivity {
         race.setText(raceStr);
         String sexeStr = i.getStringExtra("sexe");
         sexe.setText(sexeStr);
-
+        int ageInt = i.getIntExtra("age", 0);
+        age.setText(ageInt + " ans");
+        int colorMatInt = i.getIntExtra("colorMat", 0);
+        colorMat.setBackgroundColor(ContextCompat.getColor(this, colorMatInt));
 
     }
-
-
 }
+
+
