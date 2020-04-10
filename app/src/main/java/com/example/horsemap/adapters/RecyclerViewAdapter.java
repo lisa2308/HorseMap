@@ -31,6 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ImageView photo;
         TextView number;
         TextView place;
+        //TextView stabu;
 
 
         public RecyclerHolder(View view){
@@ -39,7 +40,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             number = view.findViewById(R.id.activity_horse_item_number);
             place = view.findViewById(R.id.activity_horse_item_place);
             photo = view.findViewById(R.id.activity_horse_item_photo);
-
+            //stabu = view.findViewById(R.id.activity_horse_item_number);
 
         }
     }
@@ -68,6 +69,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 listener.onItemClicked(holder,horse,position);
             }
         });
+
+
 
 
 

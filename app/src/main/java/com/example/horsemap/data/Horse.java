@@ -18,6 +18,7 @@ public class Horse {
     private String tel;
 
 
+
     public Horse(String race, String photo, String name, String place, int number, String sexe, int age, String size, int colorMat, String enrenement, String enplus) {
         this.race = race;
         this.name = name;
@@ -45,6 +46,21 @@ public class Horse {
         this.enplus = enplus;
         this.tel = tel;
     }
+
+    public Horse(String race, String photo, String name, String place, String sexe, int age, String size, int colorMat, String enrenement, String enplus) {
+        this.race = race;
+        this.name = name;
+        this.place = place;
+        this.photo = photo;
+        this.sexe = sexe;
+        this.age = age;
+        this.size = size;
+        this.colorMat = colorMat;
+        this.enrenement = enrenement;
+        this.enplus = enplus;
+    }
+
+
 
 
     public String getPension() {

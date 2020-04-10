@@ -69,6 +69,8 @@ public class ClubFragment extends Fragment {
         horseList.add(new Horse("(SF)","https://desenio.fr/bilder/artiklar/zoom/3547_1.jpg","CLIN D'OEIL", "N°BOX",24, "Hongre", 8, "Cheval",R.color.colorGreen,"",""));
         horseList.add(new Horse("(KWPN)","https://desenio.fr/bilder/artiklar/zoom/3547_1.jpg","DIVA", "N°BOX",25,"Jument", 8, "Cheval",R.color.colorGreen,"",""));
         horseList.add(new Horse("(ONC)","https://desenio.fr/bilder/artiklar/zoom/3547_1.jpg","MARS", "N°BOX",26, "Hongre", 8, "Poney",R.color.colorOrange,"",""));
+        horseList.add(new Horse("(SF)","https://desenio.fr/bilder/artiklar/zoom/3547_1.jpg","SPIRIT", "N°BOX",0, "Entier", 8, "Cheval",R.color.colorOrange,"",""));
+
 
         RecyclerViewHolderListener listener = new RecyclerViewHolderListener() {
             @Override

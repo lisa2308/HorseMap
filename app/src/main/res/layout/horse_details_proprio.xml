@@ -129,21 +129,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/horse_details_proprio_tel"
                     android:layout_width="150dp"
                     android:textStyle="bold"
                     android:layout_height="wrap_content"
-                    android:text="Tel proprio : "
+                    android:text="Proprio : "
                     android:layout_marginTop="20dp"
                     android:textSize="20sp"
                     android:textColor="@color/colorPrimaryDark"/>
 
                 <TextView
+                    android:id="@+id/horse_details_proprio_tel"
                     android:layout_width="200dp"
                     android:layout_height="30dp"
                     android:textSize="18dp"
                     android:layout_gravity="bottom"
-                    android:textStyle="italic"
+                    android:textStyle="normal"
                     android:textColor="@color/colorPrimaryDark"
                     android:text="04 50 36 71 33"/>
 
@@ -153,7 +153,7 @@
                 android:id="@+id/horse_details_enplus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="En + :"
+                android:text="Téléphone:"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
                 android:textSize="20sp"
